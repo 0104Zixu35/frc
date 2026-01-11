@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { useParams } from "react-router-dom";
+import React from 'react'
 import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 
 import './App.css'
@@ -9,7 +11,7 @@ import Match from './routes/match';
 import Navbar from './routes/navbar';
 import Pit from './routes/pit';
 import Strategic from './routes/strategic';
-
+import DTFTeams from './routes/dtfTeams';
 function App() {
   
 
@@ -27,6 +29,9 @@ function App() {
         <Route path="/pit" element={<Pit />} />
         <Route path="/datalookup" element={<Datalookup />} />
         <Route path="/dtf" element={<Dtf />} />
+        <Route path="/dtf/team" element={<DTFTeams />} />
+        <Route path="/dtf/teamParamsList" element={<DTFTeams />} />
+
       </Routes>
 
     </div>
